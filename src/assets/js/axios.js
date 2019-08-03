@@ -4,7 +4,7 @@ import { api, nwCode } from './json';
 
 
 let service = axios.create({
-    baseURL: process.env.VUE_APP_API_URL,
+    baseURL: 'https://wwwapi.pzlive.vip/index/',
     timeout: 5000,
     headers: {
         // 'content-type': 'application/json;charset=utf-8',

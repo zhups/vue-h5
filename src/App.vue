@@ -8,6 +8,17 @@
 
 export default {
   name: 'app',
+  mounted () {
+    this.aaaa()
+  },
+  methods: {
+    aaaa(){
+      var a = res=>{
+        console.log('ssssssssssssss')
+      }
+      a()
+    }
+  },
   components: {
     
   }

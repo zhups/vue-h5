@@ -6,6 +6,13 @@ const api = {
             3000: '用户未注册',
         }
     },
+    getRecommend: {
+        name: 'getRecommend',
+        url: 'Recommend/getRecommend',
+        errCode: {
+            3000: '用户未注册',
+        }
+    },
     getsearchgoodsbylabel: {
         name: 'getsearchgoodsbylabel',
         url: 'goods/getsearchgoodsbylabel',

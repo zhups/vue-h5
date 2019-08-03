@@ -1,6 +1,6 @@
 <template>
     <div class="wrapper">
-        <div class="content">
+        <div class="home-content">
             <transition name="move" mode="out-in">
               <router-view></router-view>
             </transition>
@@ -11,26 +11,27 @@
 
 <script>
 import vTabbar from '../../components/tabbar';
-    export default {
-      data () {
-        return {
-          name:'',
-          jsonData:{},
-          arrData:[]
-        }
-      },
-      mounted () {
-        // this.$axios('getsearchgoodsbylabel',{
-        //   data:{label_name:2},
-        // }).then(()=>{
-        //   console.log(222222)
-        // })
-        // this.getInt('5454564564561561284','836415458748554')
-      },
-      methods: {
-      },
-      components:{
-        vTabbar
-      }
+export default {
+  data () {
+    return {
+      name:'',
+      jsonData:{},
+      arrData:[]
+    }
+  },
+  mounted () {
+  },
+  methods: {
+  },
+  components:{
+    vTabbar
+  }
     }
 </script>
+
+<style>
+.home-content{
+  height: calc(100% - 50px);
+}
+</style>
+

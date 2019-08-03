@@ -1,42 +1,63 @@
 <template>
-<div>
-  <!-- <mt-tabbar> -->
-    <!-- <mt-tab-item id="首页">
-      <img slot="icon" src="../assets/images/index.png">
-      首页
-    </mt-tab-item>
-    <mt-tab-item id="分类">
-      <img slot="icon" src="../assets/images/class.png">
-      分类
-    </mt-tab-item>
-    <mt-tab-item id="钻石会员">
-      <img slot="icon" src="../assets/images/diamond.png">
-      钻石会员
-    </mt-tab-item>
-    <mt-tab-item id="购物车">
-      <img slot="icon" src="../assets/images/cart.png">
-      购物车
-    </mt-tab-item>
-    <mt-tab-item id="我的">
-      <img slot="icon" src="../assets/images/my.png">
-      我的
-    </mt-tab-item> -->
-  <!-- </mt-tabbar> -->
-  </div>
+  <van-tabbar 
+    v-model="active"
+    active-color="#FF0000"
+    inactive-color="#000"
+    >
+    <van-tabbar-item name="home">
+      <span>首页</span>
+        <img
+          slot="icon"
+          slot-scope="props"
+          :src="props.active ?  webImage+'index1.png' : webImage + 'index.png'"
+        >
+    </van-tabbar-item>
+    <van-tabbar-item  name="class">
+      <span>分类</span>
+        <img
+          slot="icon"
+          slot-scope="props"
+          :src="props.active ?  webImage+'class1.png' : webImage + 'class.png'"
+        >
+    </van-tabbar-item>
+    <van-tabbar-item name="diamond">
+      <span>钻石会员</span>
+        <img
+          slot="icon"
+          :src="webImage+'diamond.png'"
+        >
+    </van-tabbar-item>
+    <van-tabbar-item name="cart" info="20">
+      <span>购物车</span>
+        <img
+          slot="icon"
+          slot-scope="props"
+          :src="props.active ?  webImage+'cart1.png' : webImage + 'cart.png'"
+        >
+    </van-tabbar-item>
+    <van-tabbar-item name="my">
+      <span>我的</span>
+        <img
+          slot="icon"
+          slot-scope="props"
+          :src="props.active ?  webImage+'my1.png' : webImage + 'my.png'"
+        >
+    </van-tabbar-item>
+  </van-tabbar>
 </template>
 
 <script>
-
 export default {
   data(){
     return {
-      selected:''
+      active: 'home',
+      webImage: this.$store.state.webImage + 'icon/'
     }
   },
   components:{
-      
   },
   crated(){ 
+    console.log(my)
   },
   mounted(){
     

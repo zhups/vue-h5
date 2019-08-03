@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-const Home = r => require.ensure([], () => r(require('./pages/home/home')), 'Home')
-const index = r => require.ensure([], () => r(require('./pages/home/index')), 'index')
+const Home = r => require.ensure([], () => r(require('./pages/home/home.vue')), 'Home')
+const index = r => require.ensure([], () => r(require('./pages/home/index.vue')), 'index')
 
 Vue.use(Router)
 
